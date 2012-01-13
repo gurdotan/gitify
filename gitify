@@ -1,0 +1,39 @@
+#!/bin/sh
+
+log()
+{
+  echo " * $1"
+}
+
+### Basic aliases
+log "Adding basic aliases:"
+log "======================="
+
+log "git config --global alias.st status"
+git config --global alias.st status
+log "git config --global alias.br branch"
+git config --global alias.br branch
+log "git config --global alias.co checkout"
+git config --global alias.co checkout
+log "git config --global alias.ci checkin"
+git config --global alias.ci checkin
+log "git config --global alias.df diff"
+git config --global alias.df diff
+
+### Non fast-forward merging
+echo "\n"
+log "Adding merge aliases:"
+log "======================="
+log 'git config --add alias.nffmerge "merge --no-ff"'
+git config --add alias.nffmerge "merge --no-ff"
+
+### Hisory graphs
+echo "\n"
+log "Adding history graph aliases:"
+log "======================="
+log 'git config --global alias.logk "log --graph --pretty=oneline --abbrev-commit --decorate"'
+git config --global alias.logk "log --graph --pretty=oneline --abbrev-commit --decorate"
+log "git config --global alias.log-color 'log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  --date=relative'"
+git config --global alias.log-color "log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  --date=relative"
+
+
