@@ -36,4 +36,11 @@ git config --global alias.logk "log --graph --pretty=oneline --abbrev-commit --d
 log "git config --global alias.log-color 'log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  --date=relative'"
 git config --global alias.log-color "log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m %C(white)- %d%x1b[0m%x20%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'  --date=relative"
 
+### Advanced aliases
+echo "\n"
+log "Adding some more aliases:"
+log "======================="
+git config --global alias.mb "merge-base"
+git config --global alias.cpick "cherry-pick"
+
 
