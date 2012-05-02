@@ -25,7 +25,7 @@ echo "\n"
 log "Adding merge aliases:"
 log "======================="
 log 'git config --add alias.nffmerge "merge --no-ff"'
-git config --add alias.nffmerge "merge --no-ff"
+git config --global alias.nffmerge "merge --no-ff"
 
 ### Hisory graphs
 echo "\n"
