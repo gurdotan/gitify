@@ -42,5 +42,6 @@ log "Adding some more aliases:"
 log "======================="
 git config --global alias.mb "merge-base"
 git config --global alias.cpick "cherry-pick"
+git config --global alias.branch-note '!git config branch.$(git symbolic-ref HEAD|sed "s/refs\/heads\///").note $( if [ $# -gt 0 ]; then $1; fi)'
 
 
